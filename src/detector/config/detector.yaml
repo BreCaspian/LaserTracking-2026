@@ -1,0 +1,5 @@
+%YAML:1.0
+
+backend: "trt_engine"           # classical | trt_engine
+classical_config: "../classical/config/classical.yaml"
+trt_config: "../trt_engine/config/trt.yaml"

@@ -1,0 +1,72 @@
+%YAML:1.0
+serial_number: ""              # 相机序列号，空=自动选择
+use_first_device: 1            # 0=不用首台 1=用首台
+device_index: 0                # 索引(当 use_first_device=0)
+
+trigger_mode: 0                # 0=连续 1=触发
+trigger_source: 7              # 触发源(见SDK枚举)
+
+frame_rate_enable: 1           # 0=关闭 1=开启
+frame_rate: 19.2               # 目标帧率
+
+auto_exposure: 0               # 0=手动 1=自动
+exposure_time_us: 5000.0       # 手动曝光(us)
+auto_exposure_time_lower_us: 0.0  # AE下限(us)
+auto_exposure_time_upper_us: 0.0  # AE上限(us)
+
+auto_gain: 1                   # 0=手动 1=自动
+gain: 0.0                      # 手动增益
+
+balance_white_auto: 1          # 0=关闭 1=自动
+
+gamma_enable: 0                # 0=关闭 1=开启
+gamma_selector: 0              # 伽马通道(见SDK枚举)
+gamma: 0.7                     # 伽马值
+
+brightness_enable: 0           # 0=关闭 1=开启
+brightness: 0.0                # 亮度值
+
+digital_shift_enable: 0        # 0=关闭 1=开启
+digital_shift: 0.0             # 数字移位值
+
+pixel_format: 17301514         # 像素格式(BayerGB8)
+
+roi_enable: 0                  # 0=关闭 1=开启
+roi_offset_x: 0                # ROI偏移X
+roi_offset_y: 0                # ROI偏移Y
+roi_width: 1280                   # ROI宽(0=全)
+roi_height: 1280                  # ROI高(0=全)
+
+output_bgr: 1                  # 0=关 1=开
+output_raw: 1                  # 0=关 1=开
+copy_raw: 1                    # 0=零拷贝 1=拷贝
+
+rotate_180: 0                  # 0=不旋转 1=旋转
+
+grab_timeout_ms: 1000          # 取流超时(ms)
+image_node_num: 8              # 缓冲数量
+grab_strategy: 1               # 抓取策略(见SDK枚举)
+
+undistort_enable: 1            # 0=关闭 1=开启
+calib_path: "config/ost.yaml"  # 标定文件
+
+reconnect_enable: 1            # 0=关闭 1=开启
+reconnect_max_failures: 10     # 失败阈值
+reconnect_retry_delay_ms: 1000 # 重连间隔(ms)
+reconnect_max_retries: 0       # 0=无限次
+
+feature_load_enable: 0         # 0=关闭 1=开启
+feature_load_path: "config/camera.mfs"          # 参数文件路径
+feature_save_enable: 0         # 0=关闭 1=开启
+feature_save_path: "config/camera.mfs"          # 保存路径
+feature_save_on_close: 0       # 0=不保存 1=保存
+
+# 专为高性能推理引擎所设计
+zero_copy_enable: 1            # 0=关闭 1=启用预分配缓冲池
+buffer_pool_size: 6            # 帧池大小(4~8)
+gpu_pipeline_enable: 1         # 0=关闭 1=启用pinned/async预留
+gpu_device_id: 0               # GPU设备ID
+gpu_stream_enable: 1           # 0=关闭 1=启用CUDA stream预留
+gpu_demosaic_enable: 1         # 0=关闭 1=GPU去马赛克预留
+gpu_demosaic_backend: "npp"   # GPU去马赛克后端(auto/opencv/npp)
+bayer_pattern: "GB"            # Bayer格式(GB/GR/BG/RG)

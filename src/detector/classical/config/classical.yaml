@@ -1,0 +1,26 @@
+%YAML:1.0
+h_min: 8          # HSV H下限
+h_max: 22         # HSV H上限
+s_min: 120        # HSV S下限
+s_max: 255        # HSV S上限
+v_min: 80         # HSV V下限
+v_max: 255        # HSV V上限
+blur_kernel: 1    # 高斯模糊核(0=关闭)
+morph_kernel: 5   # 形态学核大小
+morph_iter: 2     # 形态学迭代次数
+min_area: 80.0    # 最小面积
+max_area: 1e9     # 最大面积
+min_circularity: 0.7  # 最小圆度
+min_fill_ratio: 0.6   # 填充率阈值
+min_radius: 3.0       # 最小半径
+max_radius: 2000.0    # 最大半径
+downscale: 0.5        # 下采样比例(0.25~1.0)
+use_roi: 1            # 使用跟踪ROI
+roi_expand_px: 150    # ROI扩展像素(原图)
+roi_min_size: 80      # ROI最小边(原图)
+roi_fallback_full: 1  # ROI未检出时退回全图
+track_enable: 1       # 跟踪开关
+max_missed: 5         # 最大丢失帧数
+smooth_alpha: 0.6     # 跟踪平滑系数
+max_jump_px: 80.0     # 预测跳变阈值(px)
+max_pred_ms: 200      # 最大预测时间(ms)

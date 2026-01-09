@@ -1,0 +1,18 @@
+%YAML:1.0
+engine_path: "../../model/best_fp16.engine"  # TRT engine path
+device_id: 0                             # GPU device id
+target_w: 1280                           # engine input width
+target_h: 1280                           # engine input height
+preprocess: "letterbox"                  # letterbox | resize
+output_mode: "raw_only"                  # auto | packed_nms | raw_with_nms | raw_only
+num_classes: 1                           # class count
+conf: 0.8                               # score threshold
+iou: 0.45                                # NMS IoU
+max_det: 100                             # max detections
+top_k: 1                                 # keep top-k only
+box_fmt: "cxcywh"                        # cxcywh | xyxy (raw decode)
+apply_sigmoid: 0                         # raw output already sigmoid
+max_batch: 1                             # engine supports batch=1
+streams: 1                               # TRT streams
+auto_streams: 0                          # auto stream selection
+use_gpu_input: 1                         # prefer GPU input when available
