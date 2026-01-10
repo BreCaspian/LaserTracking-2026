@@ -186,17 +186,21 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 - **电机：** **GM6020**（示例型号）
 - **微控制器（MCU）：** **STM32F103C8T6**（用于底层控制与串口通信）
 
-<p align="center">
-  <img src="docs/GM6020.png" width="500" alt="GM6020 Motor">
-  <br>
-  <em>GM6020 motor (example)</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <img src="docs/GM6020.png" height="325" alt="GM6020 Motor"><br>
+      <em>GM6020 motor (example)</em>
+    </td>
+    <td align="center" valign="middle">
+      <img src="docs/STM32F103C8T6.jpg" height="325" alt="STM32F103C8T6"><br>
+      <em>STM32F103C8T6 MCU</em>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="docs/STM32F103C8T6.jpg" width="500" alt="STM32F103C8T6">
-  <br>
-  <em>STM32F103C8T6 MCU</em>
-</p>
+
+
 
 ---
 
