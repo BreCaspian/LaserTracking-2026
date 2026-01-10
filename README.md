@@ -138,8 +138,8 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 以下为激光追踪系统参考实现所使用的硬件配置。
 
 <div align="center" style="display:flex; justify-content:center; align-items:center; gap:0;">
-  <img src="docs/LaserTracking.jpg" height="350" alt="laser_tracking" style="display:block; margin:0; padding:0;">
-  <img src="docs/overview.png" height="350" alt="Hardware Overview" style="display:block; margin:0; padding:0;">
+  <img src="docs/LaserTracking.jpg" height="300" alt="laser_tracking" style="display:block; margin:0; padding:0;">
+  <img src="docs/overview.png" height="300" alt="Hardware Overview" style="display:block; margin:0; padding:0;">
 </div>
 <div align="center">
   <em>Hardware overview</em>
