@@ -37,6 +37,10 @@ LaserTracking/
 - `tool/boresight_calibrator`：同轴校准工具（生成 `u_L/v_L`）。
 - `tool/parallax_estimator`：视差距离估算工具。
 
+<p align="center">
+  <img src="docs/LaserTracking.jpg" width="600" alt="laser_tracking">
+</p>
+
 ## 依赖与环境
 
 - OS：Ubuntu 22.04（推荐）
@@ -54,7 +58,8 @@ LaserTracking/
 - TensorRT: 10.14.1 (system packages, libnvinfer/libnvinfer_plugin)
 - OpenCV: 4.5.4 (system), 4.12.0 (conda/python)
 
-### 硬件
+### 硬件清单
+
 
 
 
