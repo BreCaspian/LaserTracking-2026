@@ -5,7 +5,7 @@
 </p>
 
 
-**ROBOMASTER 2026 华北理工大学 HORIZON战队 雷达组 反无人机激光追踪系统视觉部分 先行开源** **[二轴云台电控部分开源](https://github.com/NCST-Horizon-RM/Horizon_frame_f1)**
+**ROBOMASTER 2026 华北理工大学 HORIZON战队 雷达组 反无人机激光追踪系统视觉部分 先行开源** **[二轴云台电控开源](https://github.com/NCST-Horizon-RM/Horizon_frame_f1)**
 
 ---
 ## 概览
