@@ -20,6 +20,11 @@
 ---
 ## Demo实际效果
 
+<p align="center">
+  <img src="docs/demo.gif" width="900" alt="Demo">
+  <br>
+  <em>Demo : Search & Tracking</em>
+</p>
 
 
 ## 工程结构
