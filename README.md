@@ -140,6 +140,8 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 - **没有检测目标**：检查 detector 配置、光照、目标颜色与相机曝光。
 
 
+---
+
 ## 硬件清单
 
 以下为激光追踪系统参考实现所使用的硬件配置。
