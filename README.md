@@ -4,7 +4,8 @@
   <img src="docs/Horizon.png" width="250" alt="Horizon Team">
 </p>
 
-**ROBOMASTER 2026 华北理工大学 HORIZON战队 雷达组 反无人机激光追踪系统视觉部分 先行开源 - [二轴云台电控开源](https://github.com/NCST-Horizon-RM/Horizon_frame_f1)**
+- **ROBOMASTER 2026 华北理工大学 HORIZON战队 雷达组 反无人机激光追踪系统视觉部分 先行开源**
+- **电控部分 [二轴云台控制开源](https://github.com/NCST-Horizon-RM/Horizon_frame_f1)**
 
 ---
 ## 概览
@@ -151,7 +152,9 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 
 - **工业相机：** 海康威视 **MV-CS200-10UMUC**（USB3.0）
 >[!TIP]
-> **实际测试认为使用高帧率工业相机最佳，CS200帧率过低导致新数据刷新速度不够快，具体表现为跟随有明显延迟**
+> **实际测试认为使用高帧率工业相机最佳**
+>
+>**CS200虽分辨率高但帧率过低导致新数据刷新速度不够快，具体表现为追踪有明显延迟**
 
 - **镜头：** **MVL-KF3528M-12MP**（35 mm，1200 万像素）
 - **激光模块：** 工业级可见光激光器
