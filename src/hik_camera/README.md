@@ -140,3 +140,22 @@ cmake .. -DMVS_ROOT=/opt/MVS -DCMAKE_CUDA_ARCHITECTURES=86
 - `zero_copy_enable=1` 时，`bgr_ptr` 仅在下一帧覆盖前有效，不保证跨帧持久。
 - `pixel_format` 使用 MVS 数值枚举（例如 BayerRG8=17301513，BGR8=35127317）。
 - GPU 去马赛克依赖 CUDA；OpenCV CUDA 或 NPP 至少其一可用。
+
+## 已知问题
+
+运行 `hik_camera_demo --show` 时有可能出现以下异常：
+
+- `OpenCV resize: (-215) inv_scale_x > 0`，或
+- `OutOfMemoryError` 申请 TB 级内存，或
+- 日志出现 `SetEnumValue failed: PixelFormat`，同时无法输出 FPS。
+
+综合排查显示，主要原因通常为 **MVS SDK 版本和运行时库不一致** 或 **相机像素格式设置失败**：
+
+- 若编译时使用的 MVS 头文件与运行时加载的 `libMvCameraControl.so` 版本不一致，`MV_FRAME_OUT_INFO_EX` 结构体会被错误解析，导致帧宽高异常（进而触发 OOM 或 resize ）。
+- 像素格式设置失败时，帧转换路径可能异常，导致 `frame.bgr` 无效。
+
+建议排查：
+
+- 确认运行环境的 MVS SDK 版本与编译时一致（可查看 `/opt/MVS/ReleaseNote_EN.txt`）。
+- 确认运行时 `LD_LIBRARY_PATH` 指向正确的 MVS 动态库目录。
+- 若日志提示 `PixelFormat` 设置失败，请检查相机配置是否支持当前 `pixel_format`。
