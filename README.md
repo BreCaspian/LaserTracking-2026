@@ -256,6 +256,18 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 
 
 ---
+## 线程模型参考
+
+<p align="center">
+  <img src="docs/Thread-Model.png"
+       alt="Thread Model"
+       height="">
+</p>
+<p align="center"><em>Thread Model Overview</em></p>
+
+注：提供系统线程模型供分析参考
+
+---
 
 ## 许可证
 
