@@ -10,6 +10,15 @@
 ---
 ## 概览
 
+
+<p align="center">
+  <img src="docs/LaserTracking-Pipeline.png"
+       alt="LaserTracking"
+       height="">
+</p>
+<p align="center"><em>LaserTracking Pipeline Overview</em></p>
+
+
 - `common`：统一数据结构与配置读取接口（`TargetMeasurement` / `GimbalState` / `GimbalCommand` / `CameraModel` / `Boresight`）。
 - `hik_camera`：海康 MVS 相机驱动，支持 CPU/GPU 去马赛克与零拷贝。专为高性能推理引擎设计
 - `detector`：目标检测（传统视觉或 TRT），输出 `TargetMeasurement`。（*后续根据比赛需要替换检测模型,现为测试 Demo*）
