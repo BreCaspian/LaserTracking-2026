@@ -19,13 +19,14 @@
 <p align="center"><em>LaserTracking Pipeline Overview</em></p>
 
 
-- `common`：统一数据结构与配置读取接口（`TargetMeasurement` / `GimbalState` / `GimbalCommand` / `CameraModel` / `Boresight`）。
-- `hik_camera`：海康 MVS 相机驱动，支持 CPU/GPU 去马赛克与零拷贝。专为高性能推理引擎设计
-- `detector`：目标检测（传统视觉或 TRT），输出 `TargetMeasurement`。（*后续根据比赛需要替换检测模型,现为测试 Demo*）
-- `control`：**控制核心** 像素误差 → 云台角度指令，包含丢失目标搜索策略。
-- `gimbal_serial`：串口收发云台状态与指令。
-- `tool/boresight_calibrator`：同轴校准工具（生成 `u_L/v_L`）。
-- `tool/parallax_estimator`：视差距离估算工具。
+* ***common***：统一数据结构与配置读取接口（***TargetMeasurement*** / ***GimbalState*** / ***GimbalCommand*** / ***CameraModel*** / ***Boresight***）。
+* ***hik_camera***：海康 MVS 相机驱动，支持 CPU/GPU 去马赛克与零拷贝。专为高性能推理引擎设计
+* ***detector***：目标检测（传统视觉或 TRT），输出 ***TargetMeasurement***。（*后续根据比赛需要替换检测模型,现为测试 Demo*）
+* ***control***：**控制核心** 像素误差 → 云台角度指令，包含丢失目标搜索策略。
+* ***gimbal_serial***：串口收发云台状态与指令。
+* ***tool/boresight_calibrator***：同轴校准工具（生成 ***u_L/v_L***）。
+* ***tool/parallax_estimator***：视差距离估算工具。
+
 ---
 ## Demo实际效果
 
@@ -174,13 +175,18 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 > **实际测试认为使用高帧率工业相机最佳**
 >
 >**CS200虽分辨率高但帧率过低导致新数据刷新速度不够快，具体表现为追踪有明显延迟**
+>
+>**请使用*RM*官方推荐激光发射器，文档中所使用激光只用于*Demo***
 
 - **镜头：** **MVL-KF3528M-12MP**（35 mm，1200 万像素）
-- **激光模块：** 工业级可见光激光器
-  - **波长范围：** 635 / 637 / 650 / 660 / 685 nm（可调）
-  - **光型：** 圆点 / 一字线 / 十字线（按型号选择）
-  - **参考购买链接（淘宝）：**  
-    [https://e.tb.cn/h.7QN5h7J5SnyD6B5](https://e.tb.cn/h.7QN5h7J5SnyD6B5?tk=bmXiUX9Tbjg )
+
+* ~~**激光模块：** 工业级可见光激光器~~
+
+  * ~~**波长范围：** 635 / 637 / 650 / 660 / 685 nm（可调）~~
+  * ~~**光型：** 圆点 / 一字线 / 十字线（按型号选择）~~
+
+
+    
 
 <p align="center">
   <img src="docs/CS200.png" width="500" alt="Hikvision MV-CS200-10UMUC">
@@ -207,6 +213,9 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 - **云台：** 两轴云台（Pan-Tilt）
 - **电机：** **GM6020**（示例型号）
 - **微控制器（MCU）：** **STM32F103C8T6**（用于底层控制与串口通信）
+
+>[!TIP]
+>推荐使用更高精度编码器
 
 <table align="center">
   <tr>
@@ -266,6 +275,21 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 <p align="center"><em>Thread Model Overview</em></p>
 
 注：提供系统线程模型供分析参考
+
+---
+## 后记
+
+今天是2026年6月2日，学弟学妹刚刚结束北部赛区超级对抗赛
+
+在该方案的基础上学妹对部分功能进行了优化与完善，在比赛中获得了不错的效果，方案将在完善后开源出来。
+
+该方案在同轴校准上存在一定问题，通过理论确实可以推算出在一定距离上限的情况下可以忽略同轴校准，但是赛场距离有限，想要取得一个优秀的效果很难忽略高精度同轴校准
+
+方案目前置入了相关推算工具可以获得在固定距离下所需偏差大小，但是在赛场上我们需要动态过程，在距离变化的情况下无反馈地获得偏差
+
+学妹通过手眼标定优化了这个问题。
+
+
 
 ---
 
