@@ -31,12 +31,21 @@
 ## Demo实际效果
 
 <p align="center">
-  <img src="docs/demo.gif" width="900" alt="Demo">
+  <img src="docs/demo.gif" width="" alt="Demo">
   <br>
   <em>Demo : Search & Tracking</em>
 </p>
 
 **注：实际测试认为使用高帧率工业相机最佳，CS200虽分辨率高但帧率过低导致新数据刷新速度不够快，具体表现为追踪有明显延迟**
+
+---
+## 2026年超级对抗赛北部赛区实际效果
+
+<p align="center">
+  <img src="docs/plane.jpg" width="" alt="plane">
+</p>
+
+**注：实际上场方案是该方案改良版，学妹进行了有效优化并更换了新相机**
 
 ---
 
@@ -176,7 +185,7 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 >
 >**CS200虽分辨率高但帧率过低导致新数据刷新速度不够快，具体表现为追踪有明显延迟**
 >
->**请使用*RM*官方推荐激光发射器，文档中所使用激光只用于*Demo***
+>**请使用*RM*组委会官方推荐激光发射器，文档中所使用激光只用于*Demo***
 
 - **镜头：** **MVL-KF3528M-12MP**（35 mm，1200 万像素）
 
@@ -261,7 +270,7 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 
 - 实际可达到的帧率受 USB 3.0 链路带宽与相机分辨率限制。
 - GPU 加速并非必需，但在高帧率检测与闭环控制中强烈推荐使用。
-- 激光模块为**参考型号**，可根据功率、波长及光型需求替换为等效产品。
+- 激光模块为**参考型号**，可根据功率、波长及光型需求替换为等效产品。推荐使用RM组委会推荐激光发射器
 
 
 ---
@@ -279,7 +288,7 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 ---
 ## 后记
 
-今天是2026年6月2日，学弟学妹刚刚结束北部赛区超级对抗赛，学弟学妹取得了很大进步，做得很好！
+**今天是2026年6月2日，学弟学妹刚刚结束北部赛区超级对抗赛，学弟学妹取得了很大进步，做得很好，ta们是最棒的！**
 
 在该方案的基础上学妹对部分功能进行了优化与完善，在比赛中获得了不错的效果，方案将在完善后开源出来。
 
@@ -300,9 +309,37 @@ cd /home/XXX/LaserTracking/src/build/tool/boresight_calibrator
 
 ## 许可证
 
-仓库内包含 AGPL-3.0 声明。
+除非文件头、子目录说明或第三方组件声明另有说明，本仓库中由作者原创的**源代码、配置文件与文档内容**，均按照 **GNU Affero General Public License v3.0 only（AGPL-3.0-only）** 授权发布。
+
+**SPDX-License-Identifier: AGPL-3.0-only**
+
+你可以在 **AGPL-3.0-only** 的条款下使用、复制、修改和再分发本项目。若你**分发本项目的修改版本**，或将修改版本作为**网络服务**向用户提供交互访问，则应按照 AGPL-3.0-only 的要求，提供相应的**完整对应源代码**，并保留原有的**版权声明、许可证声明及修改说明**。
+
+本仓库中引用的**第三方库、SDK、工具链、图片、商标、硬件产品名称及相关资料**，不因本仓库的 AGPL-3.0-only 声明而改变其原有权利归属或许可条件。相关内容应遵循其各自的**许可证、EULA 或权利人声明**。
+
+本项目按**“现状”**提供，不提供任何明示或默示担保，包括但不限于**适销性、特定用途适用性和非侵权担保**。详细条款请参见仓库根目录下的 `LICENSE` 文件。
+
+
 
 ---
+
+<p align="center">
+  <img src="docs/we.jpg" width="" alt="we">
+</p>
+
+
+<p align="center">
+  <img src="docs/best.jpg" width="" alt="jpg">
+</p>
+
+
+<p align="center">
+  <img src="docs/radar.jpg" width="" alt="radar">
+</p>
+
+
+---
+
 
 <p align="center">
   <img src="docs/Horizon.png" width="200" alt="Horizon Team">
